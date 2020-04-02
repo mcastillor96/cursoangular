@@ -1,0 +1,7 @@
+<!-- <p>libros works!</p> -->
+<ul>
+    <li *ngFor="let libro of libros">
+        <!-- = [] es un array, con lo que podemos añadir elementos despues -->
+        <a [routerLink]="['/informacion', libro.id]">{{libro.titulo}}</a>
+    </li>
+</ul>
