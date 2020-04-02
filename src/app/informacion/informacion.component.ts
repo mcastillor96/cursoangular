@@ -31,7 +31,7 @@ export class InformacionComponent implements OnInit {
     // usamos las arrowFunctions
     this.rutausuario.params.subscribe(params => {
       // aqui params es un array asociativo
-      this.libroId = params['libroId'];
+      this.libroId = params['libroId']; //1
       this.libroClick = this.libroBuscador();
     });
   }

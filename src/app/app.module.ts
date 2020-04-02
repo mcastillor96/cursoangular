@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { SobreNosotrosComponent } from './sobre-nosotros/sobre-nosotros.component';
@@ -9,6 +10,8 @@ import { CabeceraComponent } from './cabecera/cabecera.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { ErrorComponent } from './error/error.component';
 import { InformacionComponent } from './informacion/informacion.component';
+// importamos el servicio creado
+import { LibroclickedService } from './libroclicked.service';
 
 // el orden de las rutas es SUPER IMPORTANTE
 // las rutas manejadas (con path especifico) se ponen PRIMERAS. Cuanto más específico más arriba
@@ -34,9 +37,13 @@ const rutas: Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot(rutas) // encadenamos .forRoot y le pasamos nuestras rutas
   ],
-  providers: [],
+  // el servicio es el provider
+  providers: [
+    LibroclickedService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

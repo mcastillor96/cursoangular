@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LibroclickedService } from '../libroclicked.service';
 
 @Component({
   selector: 'app-cabecera',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CabeceraComponent implements OnInit {
 
-  constructor() { }
+  // añadimos en la cabecera el servicio
+  constructor(public librosVistos: LibroclickedService) { }
 
   ngOnInit(): void {
   }

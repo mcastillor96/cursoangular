@@ -4,3 +4,13 @@
     <li><a [routerLink]="['/listado-libros']" routerLinkActive="myclass">Listado libros</a></li>
     <li><a [routerLink]="['/']" routerLinkActive="myclass">Inicio</a></li>  
  </ul>
+
+ <h3>
+     Libros vistos
+ </h3>
+ <!-- Si libros vistos puede acceder al listado, e.d. hay libros -->
+ <ul *ngIf="librosVistos.verListado()">
+     <li *ngFor="let libro of librosVistos.verListado()">
+         {{ libro.titulo }}
+     </li>
+ </ul>
