@@ -1,2 +1,13 @@
-<h2>Libro: {{ libroClick.titulo }}</h2>
+<!-- <h2>Libro: {{ libroClick.titulo }}</h2>
 <p>Escrito por: {{ libroClick.autor }}</p>
+<img src="{{ libroClick.imagen }}" class="bd-placeholder-img rounded-circle" width="140" height="140" /> -->
+
+<div class="row featurette">
+    <div class="col-md-7">
+        <h2 class="featurette-heading">{{ libroClick.titulo }}</h2>
+        <p class="lead">Escrito por: {{ libroClick.autor }}</p>
+    </div>
+    <div class="col-md-5">
+        <img src="{{ libroClick.imagen }}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="300" height="300" />
+    </div>
+</div>

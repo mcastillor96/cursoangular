@@ -1,12 +1,24 @@
 <!-- <p>libros works!</p> -->
-<ul>
+<!-- <ul>
     <li *ngFor="let libro of libros">
-        <!-- = [] es un array, con lo que podemos añadir elementos despues -->
-        <a
+         = [] es un array, con lo que podemos añadir elementos despues -->
+        <!-- <a
         (click)="agregarLibro(libro)" 
         [routerLink]="['/informacion', libro.id]">{{libro.titulo}}</a>
     </li>
-</ul>
+</ul> -->
 
 <div *ngIf="errorHttp">Hay un error en la carga ..</div>
 <div *ngIf="cargando" class=loader></div>
+
+<div class="container marketing">
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+        <div class="col-lg-4" *ngFor="let libro of libros">
+            <img src="{{ libro.imagen }}" class="bd-placeholder-img rounded-circle" width="140" height="140" />
+            <h3>{{libro.titulo}}</h3>
+            <p>Autor/a: {{libro.autor}}</p>
+            <p><a class="btn btn-secondary" (click)="agregarLibro(libro)" 
+                [routerLink]="['/informacion', libro.id]" role="button">Ver más</a></p>
+        </div><!-- /.col-lg-4 -->
+</div><!-- /.row -->

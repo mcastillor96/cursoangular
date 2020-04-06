@@ -12,6 +12,7 @@ import { ErrorComponent } from './error/error.component';
 import { InformacionComponent } from './informacion/informacion.component';
 // importamos el servicio creado
 import { LibroclickedService } from './libroclicked.service';
+import { RendererdemoComponent } from './rendererdemo/rendererdemo.component';
 
 // el orden de las rutas es SUPER IMPORTANTE
 // las rutas manejadas (con path especifico) se ponen PRIMERAS. Cuanto más específico más arriba
@@ -21,6 +22,7 @@ const rutas: Routes = [
   // acceder a un libro en específico
   {path: 'informacion/:libroId', component: InformacionComponent},
   {path: 'informacion', redirectTo: '/' },
+  {path: 'sobre-nosotros', component: SobreNosotrosComponent},
   {path: '', component: InicioComponent, pathMatch: 'full'}, // pathMatch: 'full' con esto indicamos que es el componente por defecto
   {path: '**', component: ErrorComponent},
 ];
@@ -33,7 +35,8 @@ const rutas: Routes = [
     CabeceraComponent,
     InicioComponent,
     ErrorComponent,
-    InformacionComponent
+    InformacionComponent,
+    RendererdemoComponent
   ],
   imports: [
     BrowserModule,

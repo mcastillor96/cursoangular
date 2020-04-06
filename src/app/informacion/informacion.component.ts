@@ -20,9 +20,9 @@ export class InformacionComponent implements OnInit {
       Esta no sería la forma más adecuada, mejor con servicios
      */
     this.libros = [
-      {id:'1', titulo: 'Te veré bajo el hielo', autor:'Robert Bryndza'},
-      {id:'2', titulo: 'Dime quién soy', autor:'Julia Navarro'},
-      {id:'3', titulo: 'El día que se perdió la cordura', autor:'Javier Castillo'}
+      {id:'1', titulo: 'Te veré bajo el hielo', autor:'Robert Bryndza', imagen: 'assets/bajo-hielo.jpg'},
+      {id:'2', titulo: 'Dime quién soy', autor:'Julia Navarro', imagen: 'assets/quien-soy.jpg'},
+      {id:'3', titulo: 'El día que se perdió la cordura', autor:'Javier Castillo', imagen: 'assets/cordura.jpg'}
     ];
   }
 
@@ -37,7 +37,7 @@ export class InformacionComponent implements OnInit {
   }
 
   filtroId(libro) {
-    return libro.id == this;
+    return libro.id === this;
   }
 
   libroBuscador() {

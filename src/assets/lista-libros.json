@@ -2,16 +2,37 @@
  {
     "id": 1,
     "titulo": "Te veré bajo el hielo",
-    "autor": "Robert Bryndza"
+    "autor": "Robert Bryndza",
+    "imagen": "assets/bajo-hielo.jpg"
  },
  {
     "id": 2,
     "titulo": "Dime quién soy",
-    "autor": "Julia Navarro"
+    "autor": "Julia Navarro",
+    "imagen": "assets/quien-soy.jpg"
  },
  {
     "id": 3,
     "titulo": "El día que se perdió la cordura",
-    "autor": "Javier Castillo"
+    "autor": "Javier Castillo",
+    "imagen": "assets/cordura.jpg"
+ },
+ {
+    "id": 1,
+    "titulo": "Te veré bajo el hielo",
+    "autor": "Robert Bryndza",
+    "imagen": "assets/bajo-hielo.jpg"
+ },
+ {
+    "id": 2,
+    "titulo": "Dime quién soy",
+    "autor": "Julia Navarro",
+    "imagen": "assets/quien-soy.jpg"
+ },
+ {
+    "id": 3,
+    "titulo": "El día que se perdió la cordura",
+    "autor": "Javier Castillo",
+    "imagen": "assets/cordura.jpg"
  }
 ]
