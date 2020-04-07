@@ -9,19 +9,19 @@
 <header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <a class="navbar-brand" href="#"><img src="assets/angular-logo.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="35" height="35" /></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" (click)="showCollapse=isCollapse()" [ngClass]="{'collapsed': showCollapse}" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="collapse navbar-collapse" [ngClass]="{'show': showCollapse}" id="navbarCollapse">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" [routerLink]="['/']"  routerLinkActive="myclass">Inicio <!--<span class="sr-only">(current)</span>--></a>
+              <a class="nav-link" (click)="showCollapse=isCollapse()" [routerLink]="['/']"  routerLinkActive="myclass">Inicio <!--<span class="sr-only">(current)</span>--></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" [routerLink]="['/listado-libros']" routerLinkActive="myclass">Libros</a>
+              <a class="nav-link" (click)="showCollapse=isCollapse()" [routerLink]="['/listado-libros']" routerLinkActive="myclass">Libros</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/sobre-nosotros']" routerLinkActive="myclass">Sobre nosotros</a>
+            <a class="nav-link" (click)="showCollapse=isCollapse()" [routerLink]="['/sobre-nosotros']" routerLinkActive="myclass">Sobre nosotros</a>
             </li>
           </ul>
         </div>
