@@ -1,0 +1,29 @@
+<!-- FORMULARIO REACTIVO -->
+<section id="forms">
+    <header>
+        <h1>Form elements</h1>
+    </header>
+    <!-- formulario es como un objeto con sus propiedades -->
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit(formulario)" novalidate>
+        <fieldset id="forms__input">
+        <legend>Input fields</legend>
+        <p>
+            <label for="user">Usuario</label>
+            <input formControlName="user">
+        </p>
+        <!-- La linea de abajo sirve para pintar de forma bonita las validaciones -->
+        <span *ngIf="formulario.get('user').hasError('required')">Este campo es requerido</span>
+        <span *ngIf="formulario.get('user').hasError('pattern')">No es un nombre válido</span>
+    
+        <p>
+            <label for="password">Password</label>
+            <input formControlName="password">
+        </p>
+        <p><button class="button primary" type="submit" [disabled]="!formulario.valid">Submit</button></p>
+        </fieldset>
+    </form>
+</section>
+<!-- Para ver los errores de las validaciones -->
+<!-- El validador funciona cuando da 'null' -->
+<!-- La del campo usuario --> {{formulario.controls.user.errors | json}}
+<!-- La del campo password --> {{formulario.controls.password.errors | json}}

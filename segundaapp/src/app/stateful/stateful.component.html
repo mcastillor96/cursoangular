@@ -25,7 +25,19 @@
             <li class="list-group-item disabled"><h2>Total: <strong>{{ finalPrice() }}€</strong></h2></li>
         </ul>
 
+        <!-- Añadimos un evento de teclado -->
+        <input type="text" (keydown)="onKeyboard($event)"/>
         <!-- Añadimos el componente confirm -->
         <app-confirm></app-confirm>
+        <!-- Añadimos el componente status-cart -->
+        <app-status-cart 
+        [price]="finalPrice()"
+        [shopModel]="shopModel.shopItems"
+        (add)="onConfirm()"
+        ></app-status-cart>
+
+        <br>
+        <!-- <app-formularioprimero></app-formularioprimero> -->
+        <app-formulariosegundo></app-formulariosegundo>
 </main><!-- /.container -->
  

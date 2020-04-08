@@ -39,4 +39,8 @@ export class StatelessComponent implements OnInit {
     return this.disable;
   }
 
+  mensaje() {
+    alert('No descargues imagenes');
+  }
+
 }

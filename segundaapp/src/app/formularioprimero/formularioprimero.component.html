@@ -1,0 +1,51 @@
+<!-- PRIMERA PARTE (con explicaciones/comentarios) -->
+<!-- <section id="forms">
+    <header>
+        <h1>Form elements</h1>
+    </header> -->
+    <!-- Para convertir en un formulario de angular, de ponemos el ngForm y le ponemos el nombre primerformulario para poder manejarlo -->
+    <!-- <form #formularioprimero="ngForm">
+        <fieldset id="forms__input">
+        <legend>Input fields</legend>
+        <p>
+            <label for="user">Usuario</label> -->
+            <!-- Input para poder escuchar -->
+            <!-- Con el ngModel hacemos que la comunicacion sea bidireccional -->
+            <!-- <input name="user" id="user" type="text" placeholder="Su nombre de usuario" required ngModel #user="ngModel">
+        </p>
+        </fieldset>
+    </form>
+</section> -->
+
+<!-- Esto para poder ver la comunicacion bidireccional -->
+<!-- {{formularioprimero.value | json}} -->
+<!-- FIN PRIMERA PARTE -->
+
+<!-- SEGUNDA PARTE -->
+<!-- FIN SEGUNDA PARTE -->
+
+<section id="forms">
+<header>
+    <h1>Form elements</h1>
+</header>
+<!-- [formGroup]="formulario" -->
+<form #formularioprimero="ngForm" (ngSubmit)="onSubmit(formularioprimero)" novalidate>
+    <fieldset id="forms__input">
+    <legend>Input fields</legend>
+    <p>
+        <label for="user">Usuario</label>
+        <input name="user">
+    </p>
+    <!-- <span *ngIf="formulario.get('user').hasError('required')">Este campo es requerido</span> -->
+
+    <p>
+        <label for="password">Password</label>
+        <input name="password">
+    </p>
+    <!-- -->
+    <p><button class="button primary" type="submit" [disabled]="!formularioprimero.valid" >Submit</button></p>
+    </fieldset>
+</form>
+</section>
+<!-- {{formulario.controls.user.errors | json}} -->
+{{formularioprimero.valid | json}}
